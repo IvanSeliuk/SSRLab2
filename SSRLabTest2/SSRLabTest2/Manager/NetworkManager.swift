@@ -31,7 +31,7 @@ class NetworkManager {
     func getPlaceData(onCompletion: @escaping (PlaceJson) -> (),
                  onError: ((String?) -> ())?) {
         
-        guard let url = API.city.cityUrl else { return }
+        guard let url = API.place.placeUrl else { return }
         AF.request(url).responseDecodable(of: PlaceJson.self) { response in
             switch response.result {
             case .success(let place):

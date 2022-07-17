@@ -1,5 +1,5 @@
 //
-//  CityViewController.swift
+//  PlaceViewController.swift
 //  SSRLabTest2
 //
 //  Created by Иван Селюк on 17.07.22.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CityViewController: UIViewController {
+class PlaceViewController: UIViewController {
 
     let tableView = UITableView()
-    private var city: CityJson? {
+    private var place: PlaceJson? {
         didSet {
             tableView.reloadData()
         }
@@ -18,7 +18,7 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         allSetup()
-        getCityData()
+        getPlaceData()
         navigationController?.navigationBar.tintColor = UIColor.black
     }
     
@@ -34,7 +34,7 @@ class CityViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "CityTableViewCell", bundle: nil), forCellReuseIdentifier: "CityTableViewCell")
+        tableView.register(UINib(nibName: "PlaceTableViewCell", bundle: nil), forCellReuseIdentifier: "PlaceTableViewCell")
         tableView.backgroundColor = UIColor(named: "ColorDark")
         
     }
@@ -47,9 +47,9 @@ class CityViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
-    private func getCityData() {
-        NetworkManager.shared.getCityData(onCompletion: { [weak self] cityData in
-            self?.city = cityData
+    private func getPlaceData() {
+        NetworkManager.shared.getPlaceData(onCompletion: { [weak self] placeData in
+            self?.place = placeData
             
         }, onError: { [weak self] error in
             guard let error = error else { return }
@@ -59,32 +59,32 @@ class CityViewController: UIViewController {
 
 }
 
-extension CityViewController: UITableViewDelegate {
+extension PlaceViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 106
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard let vc = PlaceViewController.getInstanceController as? PlaceViewController else { return }
-        //vc.selectedNews = city?[indexPath.row]
-        
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        guard let vc = OpenNewsViewController.getInstanceController as? OpenNewsViewController else { return }
+//        vc.selectedNews = city?[indexPath.row]
+//
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
-extension CityViewController: UITableViewDataSource {
+extension PlaceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as? CityTableViewCell else { return UITableViewCell() }
-        if let item = city?[indexPath.row] {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceTableViewCell", for: indexPath) as? PlaceTableViewCell else { return UITableViewCell() }
+        if let item = place?[indexPath.row] {
             cell.setupData(with: item)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let city = city else { return 0 }
-        return city.count
+        guard let place = place else { return 0 }
+        return place.count
     }
     
     

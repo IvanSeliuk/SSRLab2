@@ -22,7 +22,6 @@ class FileServiceManager {
     func getImage(from stringUrl: String, completed: @escaping (UIImage?) -> ()) {
         let pathImage = stringUrl.replacingOccurrences(of: "https://", with: "")
         let imageUrl = documentDirectory.appendingPathComponent(pathImage)
-        print("Путь: \(documentDirectory)")
         if !directoryExistsAtPath(imageUrl.deletingLastPathComponent().path) {
             do {
                 try FileManager.default.createDirectory(atPath: imageUrl.deletingLastPathComponent().path, withIntermediateDirectories: true, attributes: nil)
@@ -51,9 +50,5 @@ class FileServiceManager {
         DispatchQueue.main.async {
             completed(UIImage(data: dataImage))
         }
-        
-        
     }
-    
-    
 }

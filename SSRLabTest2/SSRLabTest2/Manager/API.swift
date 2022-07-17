@@ -10,7 +10,7 @@ import Foundation
 enum API: String {
 
     case city = "https://krokapp.by/api/get_cities/11/"
-    case place = "http://krokapp.by/api/get_points/11/"
+    case place = "https://krokapp.by/api/get_points/11/"
     
     var cityUrl: URL? {
         return URL(string: API.city.rawValue)
