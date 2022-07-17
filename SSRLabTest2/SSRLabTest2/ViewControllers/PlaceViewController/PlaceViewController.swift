@@ -64,13 +64,13 @@ extension PlaceViewController: UITableViewDelegate {
         return 106
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
 //        guard let vc = OpenNewsViewController.getInstanceController as? OpenNewsViewController else { return }
 //        vc.selectedNews = city?[indexPath.row]
 //
 //        navigationController?.pushViewController(vc, animated: true)
-//    }
+    }
 }
 
 extension PlaceViewController: UITableViewDataSource {
