@@ -14,7 +14,6 @@ class NetworkManager {
     
     func getCityData(onCompletion: @escaping (CityJson) -> (),
                  onError: ((String?) -> ())?) {
-        
         guard let url = API.city.cityUrl else { return }
         AF.request(url).responseDecodable(of: CityJson.self) { response in
             switch response.result {
@@ -30,7 +29,6 @@ class NetworkManager {
     
     func getPlaceData(onCompletion: @escaping (PlaceJson) -> (),
                  onError: ((String?) -> ())?) {
-        
         guard let url = API.place.placeUrl else { return }
         AF.request(url).responseDecodable(of: PlaceJson.self) { response in
             switch response.result {

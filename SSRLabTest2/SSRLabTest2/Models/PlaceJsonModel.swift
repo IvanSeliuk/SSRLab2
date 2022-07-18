@@ -8,7 +8,7 @@
 import Foundation
 
 typealias PlaceJson = [Place]
-// MARK: - PlaceElement
+// MARK: - Place
 struct Place: Codable {
     let id, idPoint: Int
     let name, text, sound: String
@@ -22,7 +22,7 @@ struct Place: Codable {
     let images: [String]
     let tags: [Int]
     let isExcursion: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case idPoint = "id_point"
@@ -35,44 +35,3 @@ struct Place: Codable {
         case isExcursion = "is_excursion"
     }
 }
-
-//typealias PlaceJson = [Place]
-//// MARK: - PlaceElement
-//struct Place: Codable {
-//    let id: Int
-//    let url: String
-//    let pointKeyName: String
-//    let lat, lng: Double
-//    let pointImages: [PointImage]
-//    let tags: [Tag]
-//    let city: CityPlace
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, url
-//        case pointKeyName = "point_key_name"
-//        case lat, lng
-//        case pointImages = "point_images"
-//        case tags, city
-//    }
-//}
-//
-//// MARK: - City
-//struct CityPlace: Codable {
-//    let id: Int
-//}
-//
-//// MARK: - PointImage
-//struct PointImage: Codable {
-//    let file: String
-//}
-//
-//// MARK: - Tag
-//struct Tag: Codable {
-//    let id: Int
-//    let tagKey: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case tagKey = "tag_key"
-//    }
-//}

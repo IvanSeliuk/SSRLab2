@@ -30,6 +30,10 @@
 		6DC7AD5228840A45008B94CF /* FileServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AD5128840A45008B94CF /* FileServiceManager.swift */; };
 		6DC7AD59288410A7008B94CF /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AD57288410A6008B94CF /* CityTableViewCell.swift */; };
 		6DC7AD5A288410A7008B94CF /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DC7AD58288410A7008B94CF /* CityTableViewCell.xib */; };
+		6DE4219D2885FFE6007627AE /* LoadingViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE4219C2885FFE6007627AE /* LoadingViewController + UI.swift */; };
+		6DE4219F28860000007627AE /* CityViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE4219E28860000007627AE /* CityViewController + UI.swift */; };
+		6DE421A128860013007627AE /* PlaceViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE421A028860013007627AE /* PlaceViewController + UI.swift */; };
+		6DE421A328860025007627AE /* ShowPlaceViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE421A228860025007627AE /* ShowPlaceViewController + UI.swift */; };
 		E1E034EDE2615150640AC1CC /* Pods_SSRLabTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F2D1EEA721A36507FAA7E2 /* Pods_SSRLabTest2.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		6DC7AD5128840A45008B94CF /* FileServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileServiceManager.swift; sourceTree = "<group>"; };
 		6DC7AD57288410A6008B94CF /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		6DC7AD58288410A7008B94CF /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		6DE4219C2885FFE6007627AE /* LoadingViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadingViewController + UI.swift"; sourceTree = "<group>"; };
+		6DE4219E28860000007627AE /* CityViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController + UI.swift"; sourceTree = "<group>"; };
+		6DE421A028860013007627AE /* PlaceViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceViewController + UI.swift"; sourceTree = "<group>"; };
+		6DE421A228860025007627AE /* ShowPlaceViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowPlaceViewController + UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			children = (
 				6D1BBD78288448B500974D5B /* PlaceViewController.swift */,
 				6D1BBD7A288448C400974D5B /* PlaceViewController.storyboard */,
+				6DE421A028860013007627AE /* PlaceViewController + UI.swift */,
 			);
 			path = PlaceViewController;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 			children = (
 				6D1BBD84288463CF00974D5B /* ShowPlaceViewController.swift */,
 				6D1BBD86288463D800974D5B /* ShowPlaceViewController.storyboard */,
+				6DE421A228860025007627AE /* ShowPlaceViewController + UI.swift */,
 			);
 			path = ShowPlaceViewController;
 			sourceTree = "<group>";
@@ -189,6 +199,7 @@
 			children = (
 				6DC7AD382883FA25008B94CF /* LoadingViewController.swift */,
 				6DC7AD372883FA25008B94CF /* LoadingViewController.storyboard */,
+				6DE4219C2885FFE6007627AE /* LoadingViewController + UI.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 			children = (
 				6DC7AD3C2883FCB3008B94CF /* CityViewController.swift */,
 				6DC7AD3E2883FCC2008B94CF /* CityViewController.storyboard */,
+				6DE4219E28860000007627AE /* CityViewController + UI.swift */,
 			);
 			path = CityViewController;
 			sourceTree = "<group>";
@@ -352,12 +364,16 @@
 			files = (
 				6D1BBD85288463CF00974D5B /* ShowPlaceViewController.swift in Sources */,
 				6D1BBD8228845AF900974D5B /* HTML.swift in Sources */,
+				6DE4219D2885FFE6007627AE /* LoadingViewController + UI.swift in Sources */,
+				6DE421A328860025007627AE /* ShowPlaceViewController + UI.swift in Sources */,
 				6D1BBD79288448B500974D5B /* PlaceViewController.swift in Sources */,
 				6DC7AD152883F913008B94CF /* AppDelegate.swift in Sources */,
 				6DC7AD5228840A45008B94CF /* FileServiceManager.swift in Sources */,
 				6DC7AD3A2883FA25008B94CF /* LoadingViewController.swift in Sources */,
 				6D1BBD7F288449BE00974D5B /* PlaceTableViewCell.swift in Sources */,
+				6DE4219F28860000007627AE /* CityViewController + UI.swift in Sources */,
 				6DC7AD3D2883FCB3008B94CF /* CityViewController.swift in Sources */,
+				6DE421A128860013007627AE /* PlaceViewController + UI.swift in Sources */,
 				6DC7AD432883FDBD008B94CF /* NetworkManager.swift in Sources */,
 				6DC7AD2F2883F98E008B94CF /* CityJsonModel.swift in Sources */,
 				6DC7AD172883F913008B94CF /* SceneDelegate.swift in Sources */,

@@ -12,7 +12,6 @@ class FileServiceManager {
     static let shared = FileServiceManager()
     private let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0]
     
-    
     fileprivate func directoryExistsAtPath(_ path: String) -> Bool {
         var isDirectory = ObjCBool(true)
         let exists = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)

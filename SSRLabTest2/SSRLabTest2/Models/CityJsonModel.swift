@@ -9,7 +9,7 @@ import Foundation
 
 typealias CityJson = [City]
 
-// MARK: - WelcomeElement
+// MARK: - City
 struct City: Codable {
     let idLocale, id: Int
     let name: String
@@ -18,7 +18,7 @@ struct City: Codable {
     let lastEditTime: Int
     let visible, cityIsRegional: Bool
     let region: String
-
+    
     enum CodingKeys: String, CodingKey {
         case idLocale = "id_locale"
         case id, name, lang, logo
