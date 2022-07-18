@@ -25,6 +25,7 @@ class LoadingViewController: UIViewController {
         setupUI()
         rightShadow()
         setupTextLabelLayout()
+        
     }
     
     func setupUI() {

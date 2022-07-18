@@ -13,11 +13,14 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var placeImage: UIImageView!
   
     func setupData(with place: Place) {
-        namePlace.text = place.name
-    
-        FileServiceManager.shared.getImage(from: place.logo, completed: { [weak self] image in
+       namePlace.text = place.name
+        
+   //     namePlace.text = place.pointKeyName
+        FileServiceManager.shared.getImage(from: place.photo, completed: { [weak self] image in
             self?.placeImage.image = image
         })
-    }
+        }
+        
+    
     
 }
